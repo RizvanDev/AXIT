@@ -1,0 +1,124 @@
+.slider__cards {
+	overflow: hidden;
+	max-width: 1170px;
+	padding: 0px;
+	margin: 0 auto;;
+	position: relative;
+}
+.slider__card {
+	max-width: 280px;
+	margin-bottom: 70px;
+	font-family: 'Open Sans', sans-serif;
+		margin: 0 50px;
+}
+.slider__card_text {
+	color: #86878b;
+	background-color: #f0f0f0;
+	line-height: 18px;
+	padding: 20px 10px;
+	margin-bottom: 25px;
+	border-radius: 5px;
+	font-style: italic;
+	position: relative;
+	&::after{
+		content: '';
+		position: absolute;
+		bottom: -20px;
+		left: 21px;
+		width: 0px;
+		height: 0px;
+		border-top: 20px solid #f0f0f0;
+		border-left: 15px solid transparent;
+		border-right: 15px solid transparent;
+	}
+}
+.slider__card_person {
+	display: flex;
+	align-items: center;
+	img{
+		object-fit: cover;
+		width: 70px;
+		height: 70px;
+		border-radius: 50%;
+	}
+}
+.person__ident{
+	margin-left: 15px;
+}
+.card__person_name {
+	display: block;
+	font-size: 20px;
+	font-weight: 700;
+	color: #333333;
+}
+.card__person_position {
+	display: block;
+	margin-top: 8px;
+	color: #86878b;
+}
+.slider__cards .slick-track{
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+}
+.slider__cards .slick-dots{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 40px;
+	transform: translateX(-4%);
+}
+.slider__cards .slick-dots li{
+		margin-left: 10px;
+}
+.slider__cards .slick-dots li.slick-active button{
+	background-color: red;
+	opacity: .5;
+}
+.slider__cards .slick-dots li button{
+	font-size: 0;
+	width: 75px;
+	height: 1px;
+	border: 0px solid transparent;
+	background-color: #6663;
+	transition: all .7s;
+}
+.slider__cards .slick-arrow{
+	position: absolute;
+	top: 35%;
+	font-size: 0;
+	border: 0;
+	background-color: transparent;
+	z-index: 10;
+}
+.slider__cards .slick-arrow.slick-prev{
+	left: 9px;
+	opacity: .8;
+	&::before{
+		content: "\f100";
+		font-family: 'icomoon';
+		font-size: 30px;
+		color: darkred;
+		transition: .2s;
+	}
+		&:active::before {
+			font-size: 25px;
+		}
+}
+.slider__cards .slick-arrow.slick-next{
+	right: 9px;
+	opacity: .8;
+		&::before{
+		content: "\f101";
+		font-family: 'icomoon';
+		font-size: 30px;
+		color: brown;
+		transition: .2s;
+	}
+		&:active::before {
+			font-size: 25px;
+		}
+}
+.slider__cards .slick-arrow.slick-disabled{
+	opacity: .3;
+}
